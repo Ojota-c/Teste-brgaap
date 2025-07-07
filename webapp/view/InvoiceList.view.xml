@@ -1,0 +1,25 @@
+<mvc:View
+   xmlns="sap.m"
+   xmlns:mvc="sap.ui.core.mvc">
+   <VBox>
+      <SearchField
+         width="100%"
+         placeholder="Pesquisar título"
+         liveChange=".onSearch"/>
+      <List
+         id="invoiceList"
+         headerText="{i18n>invoiceListTitle}"
+         class="sapUiResponsiveMargin"
+         width="auto"
+         items="{invoice>/invoices}"
+         itemPress=".onItemPress">
+         <items>
+            <ObjectListItem
+               title="{invoice>title}"
+               number="{invoice>id}"
+               numberUnit="{= ${invoice>completed} ? 'Concluído' : 'Pendente' }"
+               intro="Usuário: {invoice>userId}"/>
+         </items>
+      </List>
+   </VBox>
+</mvc:View>
