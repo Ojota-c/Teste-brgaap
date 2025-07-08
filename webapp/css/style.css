@@ -10,3 +10,130 @@ html[dir="rtl"] .myAppDemoWT .myCustomButton.sapMBtn {
    display: inline-block;
    font-weight: bold;
 }
+/* Estilos para os status */
+.statusPadding {
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  min-width: 6rem;
+  display: inline-block;
+  text-align: center;
+}
+
+.statusBox {
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  font-weight: bold;
+}
+
+/* Cores personalizadas */
+.sapMObjStatusSuccess {
+  background-color: #e0f7e0;
+  color: #256f3a;
+}
+
+.sapMObjStatusWarning {
+  background-color: #fff8e6;
+  color: #bb5900;
+}
+
+/* Espaçamentos */
+.sapUiSmallMarginBottom {
+  margin-bottom: 0.5rem;
+}
+
+.sapUiSmallMarginTop {
+  margin-top: 0.5rem;
+}
+
+.sapUiSmallMarginEnd {
+  margin-right: 0.5rem;
+}
+
+/* Estilos para a view de detalhes */
+.statusBox {
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  font-weight: bold;
+  min-width: 100px;
+  text-align: center;
+}
+
+.sapMObjStatusSuccess {
+  background-color: #e0f7e0;
+  color: #256f3a;
+}
+
+.sapMObjStatusWarning {
+  background-color: #fff8e6;
+  color: #bb5900;
+}
+
+.sapUiSmallMargin {
+  margin: 0.5rem;
+}
+
+.sapUiTinyMarginEnd {
+  margin-right: 0.25rem;
+}
+.statusBox {
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    font-weight: bold;
+    min-width: 100px;
+    text-align: center;
+}
+
+.sapMObjStatusSuccess {
+    background-color: #e0f7e0;
+    color: #256f3a;
+}
+
+.sapMObjStatusWarning {
+    background-color: #fff8e6;
+    color: #bb5900;
+}
+/* Layout estático */
+.myStaticLayout {
+    padding: 1rem;
+    margin: 0;
+    width: 100%;
+}
+
+.myFixedText, 
+.myFixedLabel, 
+.myFixedStatus {
+    margin: 0.5rem 0;
+    padding: 0;
+    line-height: 1.5;
+    width: 100%;
+}
+
+.myStatusBox {
+    margin: 1rem 0;
+    padding: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.myActionButton {
+    margin-top: 1rem;
+    width: 200px;
+    padding: 0.75rem;
+    transition: none !important; /* Remove animações */
+}
+
+/* Remove todos os efeitos hover */
+.myActionButton:hover, 
+.myActionButton:active {
+    transform: none;
+    box-shadow: none;
+}
+
+/* Status fixo */
+.myFixedStatus {
+    margin-left: 0.5rem;
+    padding: 0.5rem 1rem;
+    width: auto;
+    display: inline-block;
+}

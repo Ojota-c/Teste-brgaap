@@ -1,11 +1,33 @@
 <mvc:View
-   xmlns="sap.m"
-   xmlns:mvc="sap.ui.core.mvc"
-   controllerName="walkthrough.controller.InvoiceDetail">
-   <VBox>
-      <Text text="Título: {invoice>title}" />
-      <Text text="ID: {invoice>id}" />
-      <Text text="Usuário: {invoice>userId}" />
-      <CheckBox text="Concluído" selected="{invoice>completed}" enabled="false"/>
-   </VBox>
+    xmlns="sap.m"
+    xmlns:mvc="sap.ui.core.mvc"
+    controllerName="walkthrough.controller.InvoiceDetail"
+    displayBlock="true">
+    
+    <Page
+        title="{invoice>title}"
+        showNavButton="true"
+        navButtonPress=".onNavBack">
+        
+        <content>
+            <VBox class="myStaticLayout">
+                <Text text="ID: {invoice>id}" class="myFixedText"/>
+                <Text text="User ID: {invoice>userId}" class="myFixedText"/>
+                
+                <HBox alignItems="Center" class="myStatusBox">
+                    <Label text="Status:" class="myFixedLabel"/>
+                    <ObjectStatus
+                        text="{= ${invoice>completed} ? 'Concluído' : 'Pendente' }"
+                        state="{= ${invoice>completed} ? 'Success' : 'Warning' }"
+                        class="myFixedStatus"/>
+                </HBox>
+                
+                <Button
+                    text="{= ${invoice>completed} ? 'Marcar como Pendente' : 'Marcar como Concluído' }"
+                    type="Default"
+                    press=".onToggleStatus"
+                    class="myActionButton"/>
+            </VBox>
+        </content>
+    </Page>
 </mvc:View>

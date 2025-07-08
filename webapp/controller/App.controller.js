@@ -1,8 +1,11 @@
 sap.ui.define([
-   "sap/ui/core/mvc/Controller"
-], (Controller) => {
-   "use strict";
+  "sap/ui/core/mvc/Controller"
+], function(Controller) {
+  "use strict";
 
-   return Controller.extend("walkthrough.controller.App", {
-   });
+  return Controller.extend("walkthrough.controller.App", {
+    onInit: function() {
+      // Pode deixar vazio ou adicionar lógica de inicialização
+    }
+  });
 });

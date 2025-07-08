@@ -1,25 +1,39 @@
 <mvc:View
-   xmlns="sap.m"
-   xmlns:mvc="sap.ui.core.mvc">
-   <VBox>
+  xmlns="sap.m"
+  xmlns:mvc="sap.ui.core.mvc"
+  controllerName="walkthrough.controller.InvoiceList"
+  displayBlock="true">
+  
+  <Page title="{i18n>invoiceListTitle}">
+    <content>
       <SearchField
-         width="100%"
-         placeholder="Pesquisar título"
-         liveChange=".onSearch"/>
+        id="searchField"
+        width="100%"
+        placeholder="Pesquise por ID, 'completo', 'pendente' ou título..."
+        liveChange=".onSearch"
+        showSearchButton="false"/>
+      
       <List
-         id="invoiceList"
-         headerText="{i18n>invoiceListTitle}"
-         class="sapUiResponsiveMargin"
-         width="auto"
-         items="{invoice>/invoices}"
-         itemPress=".onItemPress">
-         <items>
-            <ObjectListItem
-               title="{invoice>title}"
-               number="{invoice>id}"
-               numberUnit="{= ${invoice>completed} ? 'Concluído' : 'Pendente' }"
-               intro="Usuário: {invoice>userId}"/>
-         </items>
+        id="invoiceList"
+        items="{invoice>/}">
+        <items>
+          <ObjectListItem
+            title="{invoice>title}"
+            type="Navigation"
+            press=".onItemPress">
+            <attributes>
+              <ObjectAttribute text="ID: {invoice>id}"/>
+              <ObjectAttribute text="User ID: {invoice>userId}"/>
+            </attributes>
+            <firstStatus>
+              <ObjectStatus 
+                text="{= ${invoice>completed} ? 'Completo' : 'Pendente' }"
+                state="{= ${invoice>completed} ? 'Success' : 'Warning' }"
+                class="statusPadding"/>
+            </firstStatus>
+          </ObjectListItem>
+        </items>
       </List>
-   </VBox>
+    </content>
+  </Page>
 </mvc:View>
