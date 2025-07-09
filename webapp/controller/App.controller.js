@@ -5,7 +5,7 @@ sap.ui.define([
 
   return Controller.extend("walkthrough.controller.App", {
     onInit: function() {
-      // Pode deixar vazio ou adicionar lógica de inicialização
+      
     }
   });
 });

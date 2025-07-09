@@ -3,7 +3,7 @@
   xmlns="sap.m"
   displayBlock="true"
   controllerName="walkthrough.controller.App">
-  <!-- Certifique-se que o App tem ID appContainer -->
+  
   <App id="appContainer">
     <pages>
       <!-- As páginas serão inseridas aqui pelo roteador -->
