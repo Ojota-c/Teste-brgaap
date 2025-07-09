@@ -17,12 +17,14 @@
                 <HBox alignItems="Center" class="myStatusBox">
                     <Label text="Status:" class="myFixedLabel"/>
                     <ObjectStatus
+                        id="statusControl"
                         text="{= ${invoice>completed} ? 'Concluído' : 'Pendente' }"
                         state="{= ${invoice>completed} ? 'Success' : 'Warning' }"
                         class="myFixedStatus"/>
                 </HBox>
                 
                 <Button
+                    id="toggleButton"
                     text="{= ${invoice>completed} ? 'Marcar como Pendente' : 'Marcar como Concluído' }"
                     type="Default"
                     press=".onToggleStatus"

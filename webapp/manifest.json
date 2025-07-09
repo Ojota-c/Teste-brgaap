@@ -31,7 +31,11 @@
         "type": "sap.ui.model.resource.ResourceModel",
         "settings": {
           "bundleName": "walkthrough.i18n.i18n",
-          "supportedLocales": ["", "pt_BR", "en"],
+          "supportedLocales": [
+            "",
+            "pt_BR"
+            
+          ],
           "fallbackLocale": ""
         }
       },
@@ -39,7 +43,8 @@
         "type": "sap.ui.model.json.JSONModel",
         "uri": "https://jsonplaceholder.typicode.com/todos",
         "settings": {
-          "loadDataAsync": true
+          "loadDataAsync": true,
+          "defaultBindingMode": "TwoWay"
         }
       }
     },
@@ -50,9 +55,11 @@
       "async": true
     },
     "resources": {
-      "css": [{
-        "uri": "css/style.css"
-      }]
+      "css": [
+        {
+          "uri": "css/style.css"
+        }
+      ]
     },
     "routing": {
       "config": {
@@ -83,6 +90,11 @@
         "invoiceDetail": {
           "viewName": "InvoiceDetail",
           "viewLevel": 2
+        },
+        "handleValidation": true,
+        "contentDensities": {
+          "compact": true,
+          "cozy": true
         }
       }
     }

@@ -1,19 +1,15 @@
 sap.ui.define([
-  "sap/ui/core/UIComponent",
-  "sap/ui/model/json/JSONModel"
-], function(UIComponent, JSONModel) {
+  "sap/ui/core/UIComponent"
+], function(UIComponent) {
   "use strict";
 
   return UIComponent.extend("walkthrough.Component", {
     metadata: {
       manifest: "json"
     },
-
     init: function() {
-  UIComponent.prototype.init.apply(this, arguments);
-  
-  // Certifique-se de que o router é inicializado
-  this.getRouter().initialize();
-}
+      UIComponent.prototype.init.apply(this, arguments);
+      this.getRouter().initialize();
+    }
   });
 });
